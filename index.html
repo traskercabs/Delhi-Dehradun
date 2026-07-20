@@ -10,8 +10,8 @@
   </script>
   
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">  
   <title>Delhi to Dehradun Cab Booking | Premium Taxi - Trasker Cabs</title>
   <meta name="description" content="Book affordable Delhi to Dehradun cabs. Premium Sedan, Ertiga SUV, and Innova Crysta options. 24x7 verified highway drivers, zero surge pricing.">
 
@@ -769,6 +769,9 @@ body{
     </div>
   </nav>
 
+  <main>
+
+
   <!-- Hero Corridor Main Section -->
   <header class="hero">
     <div class="hero-text">
@@ -787,20 +790,20 @@ body{
     <!-- Interactive Route Locked Estimator Widget -->
     <div class="widget estimator-widget">
       <div class="widget-header">
-        <h3>Route Special Estimator</h3>
+        <h2>Route Special Estimator</h2>
         <div class="status-dot">Express Lane Live</div>
       </div>
 
       <div class="grid-2">
         <div class="field">
-          <label>Pickup Location</label>
+          <label for="pickup">Pickup Location</label>
           <select id="pickup" class="select" onchange="calculate()">
             <option value="Delhi">Delhi / NCR</option>
             <option value="Dehradun">Dehradun City</option>
           </select>
         </div>
         <div class="field">
-          <label>Drop-off Location</label>
+          <label for="dropoff">Drop-off Location</label>
           <select id="dropoff" class="select" onchange="calculate()">
             <option value="Dehradun">Dehradun City</option>
             <option value="Delhi">Delhi / NCR</option>
@@ -809,7 +812,7 @@ body{
       </div>
 
       <div class="field">
-        <label>Select Vehicle Class</label>
+        <label for="vehicle">Select Vehicle Class</label>
         <select id="vehicle" class="select" onchange="calculate()">
           <option value="sedan">Sedan (Swift Dzire / Aura) • 4 Seats</option>
           <option value="suv">Family SUV (Ertiga / Carens) • 6 Seats</option>
@@ -895,6 +898,7 @@ body{
 </div>
 
     <iframe class="iframeis"
+    title="Live traffic map between Delhi and Dehradun"
         src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d14008.2343234!2d77.2090!3d28.6139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi!3m2!1d28.6139!2d77.2090!4m5!1s0x390929c356d88885%3A0x1c95337e6d987d60!2sDehradun!3m2!1d30.3165!2d78.0322!5e1!3m2!1sen!2sin"
         loading="lazy"
         allowfullscreen>
@@ -1011,6 +1015,9 @@ body{
       </button>
     </div>
   </section>
+
+  </main>
+
 
   <!-- Footer Link Ecosystem -->
   <footer class="footer">
