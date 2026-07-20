@@ -115,7 +115,7 @@
     .estimator-widget .widget-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
     .estimator-widget .widget-header h3 { font-size: 1.3rem; font-weight: 700; }
     .status-dot { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; display: flex; align-items: center; gap: 6px; }
-    .status-dot::before { content: ''; width: 6px; height: 6px; background: var(--accent-green); border-radius: 50%; box-shadow: 0 0 10px var(--accent-green); }
+    .status-dot::before { content: ''; width: 4px; height: 4px; background: var(--accent-green); border-radius: 50%; box-shadow: 0 0 10px var(--accent-green); }
 
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
     .field { margin-bottom: 16px; }
@@ -360,6 +360,7 @@ body{
     background:white;
     display:inline-block;
     margin-right:6px;
+    margin-bottom:4px;
     animation:pulse 1.5s infinite;
 }
 
@@ -374,21 +375,29 @@ body{
 
 
 /* Map */
-.traffic-widget iframe{
+.traffic-map-image{
     width:100%;
-    height:250px;
-    border:none;
+    height:100%;
+    object-fit:contain;
     border-radius:16px;
-    margin-top:12px;
-    transition: transform .35s ease,
-                box-shadow .35s ease;
+    display:block;
+    transition:transform .35s ease, box-shadow .35s ease;
+}
+
+.traffic-map-link{
+    display:block;
+    overflow:hidden;
+    border-radius:16px;
+}
+
+.traffic-map-link:hover .traffic-map-image{
+    transform:scale(1.02);
 }
 
 /* Hover Effect */
 .traffic-widget:hover{
     transform: translateY(-6px);
-    border-color: rgba(212,175,55,.6); /* Gold border */
-    box-shadow: 0 18px 40px rgba(0,0,0,.35);
+    border-color: #F59E0B; /* Gold border */
 }
 
 .traffic-widget:hover iframe{
@@ -409,7 +418,6 @@ body{
 
 .weather-widget {
     transition: transform .35s ease, box-shadow .35s ease;
-    box-shadow: 0 8px 20px rgba(0,0,0,.25);
     border-radius: 20px;
 }
 
@@ -893,17 +901,21 @@ body{
     <div class="mini-widget-header">
         <span>📺</span> Live Corridor Status
     </div>
-    <div class="live-badge">
-    🟢 LIVE
-</div>
 
-    <iframe class="iframeis"
-    title="Live traffic map between Delhi and Dehradun"
-        src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d14008.2343234!2d77.2090!3d28.6139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi!3m2!1d28.6139!2d77.2090!4m5!1s0x390929c356d88885%3A0x1c95337e6d987d60!2sDehradun!3m2!1d30.3165!2d78.0322!5e1!3m2!1sen!2sin"
+   <a
+  href="https://www.google.com/maps/dir/Delhi/Dehradun"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="traffic-map-link"
+>
+    <img
+        src="map.png"
+        alt="Delhi to Dehradun route map"
+        class="traffic-map-image"
         loading="lazy"
-        allowfullscreen>
-    </iframe>
-
+        width="600"
+        height="250">
+</a>
 </div>
 
     <!-- Flight Tracker Widget -->
