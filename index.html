@@ -25,6 +25,9 @@
 <link rel="preconnect"
       href="https://fonts.gstatic.com"
       crossorigin>
+
+
+    
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -699,6 +702,52 @@ body{
 
 
 
+.custom-route-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 28px;
+    padding: 14px 28px;
+
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+    color: #060606;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+
+    border: 1px solid rgba(245,158,11,.35);
+    border-radius: 14px;
+
+    cursor: pointer;
+    transition: all .3s ease;
+
+    box-shadow:
+        0 10px 30px rgba(245,158,11,.22),
+        inset 0 1px 0 rgba(255,255,255,.18);
+}
+
+.custom-route-btn:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 16px 40px rgba(245,158,11,.35),
+        inset 0 1px 0 rgba(255,255,255,.25);
+}
+
+.custom-route-btn:active {
+    transform: translateY(-1px);
+}
+
+.custom-route-btn::after {
+    content: "→";
+    transition: transform .25s ease;
+}
+
+.custom-route-btn:hover::after {
+    transform: translateX(5px);
+}
+
 
 
   </style>
@@ -798,9 +847,16 @@ body{
       </div>
       
       <h1>Premium <span>Delhi to Dehradun</span> Cab Service</h1>
-      <p>Seamless highway travel via the fast transit corridor. Experience transparent pricing, expert hill-certified drivers, and luxury outstation fleets. 
-        
+      <p>Seamlessly travel between Delhi and Dehradun via the fast transit corridor with transparent pricing, experienced hill-certified drivers, premium outstation vehicles, real-time trip assistance, and a commitment to comfort, safety, and punctuality from pickup to destination.
       </p>
+      
+        <a
+        href="https://wa.me/918218602998?text=Hi%20Trasker%20Cabs!%20I%20want%20a%20custom%20route%20quote."
+        class="custom-route-btn"
+        target="_blank"
+        rel="noopener noreferrer">
+         Custom Route
+        </a>
     </div>
 
     <!-- Interactive Route Locked Estimator Widget -->
@@ -911,7 +967,7 @@ body{
     </div>
 
    <a
-  href=:""
+  href=""
   target="_blank"
   rel="noopener noreferrer"
   class="traffic-map-link"
